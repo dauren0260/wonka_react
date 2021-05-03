@@ -1,0 +1,359 @@
+.factoryTour {
+
+    /* tab */
+    .tab-container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
+
+    .tab-item {
+        box-sizing: border-box;
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 50px;
+    }
+
+
+
+
+    table {
+        text-align: center;
+    }
+
+    th,
+    td {
+        border: 1px solid #212121;
+        padding: 18px;
+        color: #212121;
+
+        @include rwd($cell){
+            padding: 9px;
+        }
+    }
+
+    /* opening time */
+    .note {
+        width: 460px;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-around;
+
+        i{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+    }
+
+    .note>p:nth-child(1)::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: #ccc;
+        margin-right: 7px;
+    }
+
+    .note>p:nth-child(2)::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: #423528;
+        margin-right: 7px;
+    }
+
+    /* tickets */
+    .tickets-table {
+        margin: 30px auto;
+        width: 670px;
+
+        @include rwd($tab){
+            width: auto;
+        }
+    }
+
+    .tickets-table>table th,
+    td {
+        vertical-align: middle;
+    }
+
+    .tickets-table th {
+        color: #681116;
+        font-size: 18px;
+        background-color: rgba(247, 190, 108, 1);
+
+    }
+
+    .tickets-table span {
+        display: block;
+        color: #212121;
+        font-size: 16px;
+    }
+
+    .admission{
+        max-width: 1200px;
+        text-align: center;
+        margin: 50px auto 20px;
+
+        i{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+    }
+
+    .admission>p {
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .notice {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .notice>p,
+    .notice li {
+        text-align: left;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+
+    .notice>ul {
+        padding-left: 20px;
+    }
+
+    .notice li {
+        list-style: square;
+    }
+
+    /* access */
+
+    .address>p {
+        font-size: 20px;
+        margin: 50px 0;
+        text-align: center;
+
+        i{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+    }
+
+    .address>p::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        // background-image: url("../image/icon/magichat.png");
+        background-size: contain;
+        margin-right: 7px;
+    }
+
+    .map{
+        text-align: center;
+    }
+
+    .access>.map>img {
+        width: 600px;
+    }
+
+    /* travel way */
+    .travel-detail {
+        max-width: 800px;
+        margin: 50px auto;
+        border-bottom: 1px solid #212121;
+        padding-bottom: 20px;
+    }
+
+
+    .detail-title{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: #681116;
+        width: 100%;
+        padding: 10px 40px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .detail-section {
+        display: none;
+    }
+
+    .detail-section.open {
+        display: block;
+    }
+
+    .more-detail {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .more-detail>div {
+        box-sizing: border-box;
+        width: auto;
+        padding: 3px;
+    }
+
+    .more-detail>.detail-content {
+        border: 1px solid #212121;
+        text-align: center;
+    }
+
+
+    .more-detail>.detail-content>p:first-child {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 7px 0;
+    }
+
+    .more-detail>.detail-content:last-child {
+        background-color: #681116;
+    }
+
+    .more-detail>div.detail-content:last-child>p {
+        line-height: 47px;
+        color: #f1f1f1;
+    }
+
+    .travel-detail:last-child .more-detail {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .travel-detail:last-child .more-detail>div {
+        width: auto;
+    }
+
+
+    .detail-process svg {
+        display: none;
+    }
+
+
+    @media screen and (max-width:1200px) {
+
+        .tab-container {
+            width: 80%;
+        }
+
+        .tab-item {
+            width: 100%;
+        }
+    }
+
+
+    @media screen and (max-width:992px) {
+
+        .tab-container {
+            width: 100%;
+        }
+
+        /* access */
+        .more-detail>div {
+            width: 300px;
+        }
+
+        .more-detail {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .detail-process {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .detail-process hr {
+            display: none;
+        }
+
+        .detail-process svg {
+            display: inline-block;
+            transform: rotate(90deg) translateX(6px);
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .tab-title {
+            width: 80%;
+            margin: 50px auto 0;
+        }
+
+
+        .tab-title a {
+            font-size: 16px;
+            padding: 10px 5px;
+        }
+
+
+        /* tickets  */
+        .notice {
+            width: auto;
+            padding: 20px;
+        }
+
+        button.btn {
+            margin-top: 0px;
+        }
+
+
+        /* access */
+        iframe {
+            width: 500px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .tab-title {
+            width: 100%;
+        }
+
+        /* calendar */
+        .cld-main {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .cld-number {
+            padding: 10px;
+        }
+
+        .note {
+            width: auto;
+        }
+
+
+        /* access */
+        iframe {
+            width: 350px;
+            height: 250px;
+        }
+
+        .detail-process p {
+            width: 70%;
+            margin: 20px auto;
+            text-align: left;
+        }
+    }
+}

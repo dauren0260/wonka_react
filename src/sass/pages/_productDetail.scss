@@ -1,0 +1,209 @@
+.productDetail {
+
+    .banner-sole {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 200px;
+        background-size: 100% 400px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        opacity: .9;
+    }
+
+    .banner-sole>div {
+        display: inline-block;
+        vertical-align: top;
+        transform: translateY(130px);
+    }
+
+    .per-product>img {
+        width: 400px;
+    }
+
+    .detail {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        font-size: 22px;
+    }
+
+
+    .detail>div.price {
+        font-size: 22px;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .per-info {
+        width: 40vw;
+        min-width: 520px;
+        background-color: white;
+        text-align: left;
+        padding: 50px 60px 0;
+    }
+
+    .per-info>p {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    .per-info>p:first-child {
+        font-size: 40px;
+        color: #681116;
+    }
+
+    .quantity{
+        svg{
+            vertical-align: middle;
+        }
+
+        >input {
+            display: inline-block;
+            width: 30px;
+            border: none;
+            font-size: 18px;
+            text-align: center;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+
+    .quantity-btn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        color: #681116;
+        vertical-align: middle;
+    }
+
+    .quantity-btn.add{
+        svg{
+            padding-bottom: 1px;
+        }
+    }
+
+    button.btn.add-cart {
+        margin: 30px 0 0px auto;
+    }
+
+    button.btn {
+        font-size: 16px;
+        padding: 7px 10px;
+    }
+
+
+    /* sub-detail */
+    .downDetail{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        @include rwd($cell){
+            display: block;
+
+            >.sub-detail:nth-child(2){
+                margin-top: 20px;
+            }
+
+            >svg{
+                display: none;
+            }
+        }
+    }
+
+    .detail-title>p {
+        font-size: 18px;
+        font-weight: bold;
+        color: $keyBrown;
+    }
+
+    .detail-content {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        border-bottom: 1px solid #ccc;
+
+        p:nth-child(2){
+            margin-left: 51px;
+        }
+    }
+
+    .more-detail {
+        display: none;
+
+        @include rwd($cell){
+            display: block;
+        }
+    }
+
+    .more-detail.open {
+        display: block;
+    }
+
+    @media screen and (max-width: 992px) {
+
+        .per-info {
+            width: 80%;
+        }
+    }
+
+
+    @media screen and (max-width: 576px) {
+
+        .banner-sole {
+            background-size: 100% 200px;
+        }
+
+        .banner-sole>div {
+            transform: translateY(80px);
+        }
+
+        .per-product>img {
+            width: 250px;
+        }
+
+        .per-info {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        .per-info>p {
+            font-size: 16px;
+        }
+
+        .per-info>p:first-child {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .detail {
+            font-size: 20px;
+        }
+
+        .detail>div.price {
+            font-size: 20px;
+        }
+
+        .quantity {
+            width: auto;
+        }
+
+        .quantity>div {
+            margin: 0 20px;
+        }
+
+        button.btn {
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+    }
+}

@@ -1,0 +1,705 @@
+/* banner */
+.index {
+
+    .banner>.splide,
+    .banner>p {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .banner>.splide{
+        margin-right: 20px;
+    }
+
+    .banner {
+        width: 70%;
+        max-width: 1200px;
+        padding: 20px;
+        margin: 0 auto;
+        position: relative;
+        font-size: 16px;
+    }
+
+    .banner p {
+        font-size: 1.3em;
+        line-height: 2;
+        color: #212121;
+        width: 25%;
+        height: 80px;
+    }
+
+    .banner p span {
+        color: #E45552;
+        display: inline;
+    }
+
+    .banner .carousel {
+        width: 70%;
+        max-width: 700px;
+        margin-right: 20px;
+        overflow: visible;
+    }
+
+    .imgList img {
+        max-width: 100%;
+    }
+
+    .indicator {
+        display: inline-block;
+        position: relative;
+        top: 20px;
+        left: 50%;
+    }
+
+    .indicator>a {
+        margin: 0 5px;
+        width: 16px;
+        height: 16px;
+        background-color: #ede2dc;
+        float: left;
+        border-radius: 50%;
+    }
+
+    .banner .indicator>a:hover {
+        background-color: #681116;
+    }
+
+    /* product */
+
+    .product-container {
+        max-width: 1200px;
+        margin: 50px auto 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        @include rwd($cell){
+            margin-top: 0;
+        }
+    }
+
+    .product-container>div {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .choco-list {
+        max-width: 1200px;
+        width: 80%;
+        padding: 0 7%;
+    }
+
+    .choco-collect {
+        width: 28%;
+        max-width: 220px;
+        font-size: 20px;
+        text-align: center;
+        margin: 0 10px;
+        margin-bottom: 30px;
+        display: inline-block;
+        font-family: kristen;
+    }
+
+    .img-container {
+        border-radius: 50%;
+        border: 7px solid white;
+        border-bottom-color: rgba(247, 190, 108, 0.5);
+        /* width: 200px;
+    height: 200px; */
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        transform: rotate(45deg);
+        margin-bottom: 20px;
+        cursor: pointer;
+
+    }
+
+    .img-container:hover {
+        border-bottom-color: rgba(104, 17, 22, 0.5);
+    }
+
+    .product-container img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        transition: transform .2s linear;
+    }
+
+    .product-demo {
+        align-self: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .plate-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .plate-inner>img {
+        width: 50%;
+        height: auto;
+        border-radius: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* new arrivals */
+    .new-arrival-item {
+        // background-image: url("../image/icon/new-arrival-bg_2.png");
+        background-size: cover;
+        background-position: bottom bottom;
+        background-repeat: no-repeat;
+
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .container-new {
+        width: 100%;
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-around;
+
+        @include rwd($cell){
+            margin-top: 30px;
+        }
+    }
+
+    .container-new>.item.new p {
+        text-align: center;
+        font-family: kristen;
+        color: #681116;
+        visibility: hidden;
+    }
+
+    .item.new:nth-child(2n) {
+        transform: translateY(-10%);
+        width: 30%;
+    }
+
+    .item.new:nth-child(2n+1) {
+        transform: translateY(20%);
+        width: 25%;
+    }
+
+    .item.new:nth-child(3) {
+        transform: translateY(-30%);
+        width: 40%;
+    }
+
+    .container-new img {
+        width: 60%;
+        border-radius: 50%;
+        transition: transform .2s linear;
+    }
+
+    .container-new img:hover {
+        transform: translateY(-15px);
+    }
+
+    .container-new>.item.new:nth-child(3) p {
+        font-size: 16px;
+        visibility: visible;
+    }
+
+    .img-container a {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+
+    /* next button */
+    @keyframes arrowMove {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translateX(10px);
+        }
+    }
+
+    button.btn.next {
+        border: none;
+        background-image: linear-gradient(#FBDFB7, #FBDFB7);
+        background-size: 100% 100%;
+        margin-top: -20px;
+    }
+
+    button.btn.next svg {
+        margin-left: 5px;
+        animation-name: arrowMove;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        vertical-align: middle;
+        padding-bottom: 4px;
+    }
+
+    button.btn.next:focus {
+        outline: none;
+    }
+
+    button.btn.next:hover {
+        color: #681116;
+    }
+
+
+
+
+    /* workshops */
+    .slogan {
+        width: 100%;
+        height: 250px;
+        // background-image: url("../image/index/workshop_bg.jpg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .slogan::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(250, 250, 250, 0.30);
+    }
+
+    .slogan>p {
+        color: #212121;
+        font-size: 24px;
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        font-family: kristen;
+    }
+
+
+    .workshop-course .btn {
+        margin-top: 50px;
+        padding: 10px 20px;
+    }
+
+    .open-time>p {
+        display: inline-block;
+        font-size: 18px;
+        color: #681116;
+        margin-right: 10px;
+    }
+
+    .open-time>p:nth-child(1) {
+        color: #212121;
+        font-size: 20px;
+    }
+
+
+
+    /* factory */
+    .caption {
+        margin: 50px 0;
+        font-size: 18px;
+    }
+
+    .factory-container {
+        width: calc( 70% - 20px );
+        height: 300px;
+        overflow: hidden;
+        margin: 0px auto;
+        position: relative;
+        // background-image: url('../image/index/seasons-04.jpg');
+        background-size: 1188px auto;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+
+    .factory-detail {
+        box-sizing: border-box;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 20%;
+        height: 70%;
+        transform: translateX(-200%);
+
+        position: relative;
+        left: 50%;
+        top: 15%;
+        background: hsla(0, 0%, 100%, .9);
+
+        padding-top: 100px;
+        padding-bottom: 100px;
+        overflow: hidden;
+    }
+
+
+    .factory-detail div {
+        font-size: 20px;
+        margin: 30px 0;
+        font-family: kristen;
+        color: #212121;
+    }
+
+    .factory-detail .month span {
+        margin-right: 20px;
+    }
+
+
+    .open-time {
+        width: 310px;
+        margin: 50px auto 0;
+        font-size: 18px;
+    }
+
+    .moreinfo-factory {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    .moreinfo-factory .btn {
+        display: inline-block;
+        margin: 50px 30px;
+    }
+
+    @media screen and (max-width:1200px) {
+
+        /* banner */
+        .banner {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .imgList img {
+            display: block;
+            width: 90%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            position: static;
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .banner>.carousel {
+            width: 100%;
+            display: block;
+            margin: 0px auto;
+        }
+
+        .indicator {
+            position: static;
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        /* product */
+        .product-container .product-demo {
+            display: none;
+        }
+
+        .product-container {
+            width: 100%;
+            display: block;
+            background-image: linear-gradient(transparent, transparent);
+        }
+
+        .product-container .choco-list {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .choco-collect {
+            box-sizing: border-box;
+            width: 30%;
+            font-size: 18px;
+            margin: 0 7px 30px;
+        }
+
+        .choco-collect p {
+            width: 100%;
+            margin: 0;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-container img:hover {
+            transform: scale(1.2);
+        }
+
+        /* new arrivals */
+        .new-arrival-item {
+            // background-image: url("../image/icon/new-arrival-bg_2.png");
+            background-size: cover;
+            background-position: bottom bottom;
+
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .item.new:nth-child(2n+1) {
+            display: none;
+        }
+
+        .container-new img {
+            display: none;
+        }
+
+
+        .container-new>.item.new:nth-child(3) img {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .item.new:nth-child(3) {
+            transform: translateY(-30%);
+            display: block;
+        }
+
+        .container-new>.item.new:nth-child(2n) img {
+            display: inline-block;
+            width: 40%;
+        }
+
+        .container-new>.item.new:nth-child(2n) {
+            transform: translateY(10%);
+        }
+
+        /* factory */
+        .factory-container {
+            width: 100%;
+            margin: 20px 0;
+            border: none;
+            background-attachment: unset;
+        }
+
+
+        .factory-detail {
+            transform: translateX(-200%);
+            background-color: rgba(255, 255, 255, .9);
+        }
+
+        .factory-container img {
+            max-width: 100%;
+            vertical-align: top;
+        }
+
+
+
+
+    }
+
+
+    @media screen and (max-width:992px) {
+
+        /* new arrivals */
+        .new-arrival-item {
+            background-size: cover;
+        }
+
+        .item.new:nth-child(3) {
+            transform: translateY(-30%);
+
+        }
+
+        .container-new>.item.new:nth-child(2n) img {
+            display: inline-block;
+            width: 60%;
+        }
+
+
+        /* workshop */
+        .slogan {
+            background-attachment: unset;
+            height: 150px;
+            margin-top: 10px;
+        }
+
+        /* factory */
+        .factory-detail {
+            width: 25%;
+            transform: translateX(-150%);
+
+        }
+
+
+    }
+
+
+
+
+
+    @media screen and (max-width: 768px) {
+
+        /* banner */
+        .banner p {
+            font-size: 24px;
+        }
+
+        /* product */
+        .product-container .choco-list {
+            width: 100%;
+        }
+
+        /* new arrivals */
+        .container-new>.item.new:nth-child(3) img {
+            width: 60%;
+        }
+
+        /* workshops*/
+        div.slogan>p {
+            font-size: 18px;
+        }
+
+        /* factory */
+        .caption {
+            margin: 20px 0;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .factory-container {
+            width: 100%;
+            height: 250px;
+            margin: 20px 0;
+            border: none;
+        }
+
+        .factory-detail {
+            width: 30%;
+            transform: translateX(-50%);
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .factory-detail div {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .open-time {
+            font-size: 16px;
+        }
+
+    }
+
+    @media screen and (max-width: 576px) {
+
+        /* products */
+        .choco-collect {
+            width: 30%;
+            min-width: 145px;
+        }
+
+
+        /* new-arrivals */
+        .new-arrival-item {
+            background-size: contain;
+        }
+
+        .container-new>.item.new:nth-child(3) img {
+            display: inline-block;
+            width: 110%;
+        }
+
+        .container-new>.item.new:nth-child(2n) img {
+            display: none;
+        }
+
+        button.btn.next {
+            background-image: linear-gradient(transparent, transparent);
+            margin-top: -10px;
+        }
+
+        /* factory */
+        .factory-detail {
+            width: 40%;
+        }
+
+    }
+
+
+
+    @media screen and (max-width: 375px) {
+
+        /* banner */
+        .banner p {
+            font-size: 16px;
+        }
+
+        /* product */
+
+        .choco-collect {
+            width: 45%;
+            font-size: 16px;
+            margin: 0 5px 30px;
+        }
+
+
+        /* new arrivals */
+
+        .new-arrival-item {
+            background-size: contain;
+            background-position: center bottom;
+        }
+
+        .container-new>.item.new:nth-child(3) img {
+            display: block;
+            width: 100%;
+        }
+
+        .item.new:nth-child(3) {
+            transform: translateY(-15%);
+        }
+
+        .container-new>.item.new:nth-child(2n) img {
+            display: none;
+        }
+
+        button.btn.next {
+            background-image: linear-gradient(#FBDFB7, #FBDFB7);
+        }
+
+        /* workshops */
+        div.slogan>p {
+            font-size: 16px;
+        }
+
+
+        /* factory */
+        .factory-detail {
+            width: 50%;
+        }
+
+        .factory-detail div {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    }
+}

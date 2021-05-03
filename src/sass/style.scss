@@ -1,0 +1,33 @@
+@import "./common/mixin";
+@import "./common/reset";
+@import "./common/variables";
+@import "./common/base";
+@import "./common/common";
+
+
+@import "./common/header";
+@import "./common/footer";
+
+@import "./pages/index";
+@import "./pages/product";
+@import "./pages/productDetail";
+@import "./pages/workshops";
+@import "./pages/courseInfo";
+@import "./pages/factory";
+
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+.glide__arrows {
+    @include rwd($cell){
+        display: none;
+    }
+}
+
+.react-calendar{
+    margin: 0 auto;
+
+    @include rwd($cell){
+        margin-top: 20px;
+    }
+}

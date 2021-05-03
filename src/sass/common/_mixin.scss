@@ -1,0 +1,15 @@
+// rwd
+@mixin rwd($point) {
+
+    @media all and (max-width: $point) {
+        @content;
+    }
+   
+}
+
+@mixin background($url){
+    background-image: url($url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

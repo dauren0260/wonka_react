@@ -1,0 +1,270 @@
+@import "./variables";
+
+body {
+    font-family: 'Molengo', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header{
+    .menu .pageOn{
+        background-image: linear-gradient(rgba(104,17, 22,.5),rgb(104,17, 22));
+        color: #f1f1f1;
+        border-radius: 3px;
+    } 
+}
+
+.center{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div.title {
+    width: 70%;
+    margin: 50px auto 0;
+    box-sizing: border-box;
+    max-width: 1200px;
+    padding:0 20px;
+
+    @include rwd($cell){
+        width: 90%;
+        padding: 0;
+    }
+}
+
+h3 {
+    display: inline-block;
+    color: #681116;
+    font-size: 26px;
+
+    background-image: linear-gradient(rgba(247, 190, 108, 0.5), rgba(247, 190, 108, 0.5));
+    background-position: 0 100%;
+    background-size: 100% 45%;
+    background-repeat: no-repeat;
+}
+
+/* banner */
+.banner {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+
+    @include rwd($web){
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+.banner h3 {
+    font-size: 24px;
+    margin: 0 0 0 50px;
+    line-height: 1.5;
+
+    @include rwd($web){
+        margin: 30px 0;
+    }
+}
+
+.banner>.carousel {
+    width: 70%;
+    max-width: 700px;
+    overflow: hidden;
+}
+
+.banner>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.carousel>img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* banner */
+    .carousel img {
+        display: block;
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .banner>.carousel {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0px auto;
+    }
+}
+
+
+/* button */
+button.btn {
+    font-family: Molengo;
+    display: block;
+    text-align: center;
+    margin: 50px auto 0;
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #212121;
+    border: 1px solid #f7be6c;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+
+    background-image: linear-gradient(#f7be6c, #f7be6c);
+    background-position: 0% 0%;
+    background-size: 20% 100%;
+    background-repeat: no-repeat;
+    transition: all linear .3s;
+}
+
+button.btn:hover {
+    color: #f1f1f1;
+    background-size: 100% 100%;
+}
+
+
+/* workshop */
+.course-item{
+    width: 720px;
+    margin: 50px auto;
+    position: relative;
+    border: 2px solid $keyBrown;
+
+    @include rwd($tab){
+        width: 324px;
+    }
+
+    a{
+        display: flex;
+        text-decoration: none;
+        color: $keyBlack;
+        align-items: center;
+
+        @include rwd($tab){
+            flex-wrap: wrap;
+        }
+
+        >img{
+            width: 300px;
+            
+            @include rwd($tab){
+                width: 320px;
+            }
+        }
+    }
+}
+
+.date{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    text-align: center;
+    background-color: $keyBrown;
+    color: #fff;
+    padding: 5px;
+}
+
+.class-info{
+    margin-left: 20px;
+
+    @include rwd($tab){
+        margin-left: 10px;
+    }
+
+    p:nth-child(1){
+        font-size: 24px;
+        color: $keyBrown;
+        
+        @include rwd($tab){
+            font-size: 18px;
+            margin: 5px 0;
+        }
+    }
+    p:nth-child(2){
+        @include rwd($tab){
+            width: 280px;
+        }
+    }
+}
+    .class-detail{
+        width: 400px;
+        margin-top: 20px;
+
+        @include rwd($tab){
+            width: auto;
+        }
+    }
+
+    .content{
+        display: inline-block;
+        width: 180px;
+        margin: 10px;
+
+        @include rwd($tab){
+            width: 150px;
+            margin: 10px 0;
+        }
+
+
+        svg{
+            font-size: 2.5rem;
+            color: $h3Before;
+            vertical-align: middle;
+        }
+    }
+
+    .text{
+        display: inline-block;
+        vertical-align: middle;
+
+        span{
+            display: block;
+            margin-left: 5px;
+        }
+    }
+
+    .text, .content img{
+        vertical-align: middle;
+    }
+
+
+
+
+@media screen and (max-width: 768px) {
+    /* workshop */
+    div.slogan>p {
+        line-height: 2;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+
+    /* workshop */
+    .slogan>p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /* workshop */
+
+    div.slogan {
+        background-position: center bottom;
+    }
+
+    div.slogan>p {
+        font-size: 16px;
+        line-height: 2;
+    }
+}
